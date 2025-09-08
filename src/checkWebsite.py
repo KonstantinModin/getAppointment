@@ -5,20 +5,20 @@ from datetime import datetime
 
 url = 'https://sige.gva.es/qsige/citaprevia.justicia/#/es/home?uuid=01E4-33B69-2883-5B9B8'
 
-# name = "Anastasia"
-# surname = "Modina"
-# nie = "Y3501060Z"
-# email = "anmodina@gmail.com"
-# phone = "640702535"
-
-name = "Jorge"
-surname = "Navarro"
+name = "Anastasia"
+surname = "Modina"
 nie = "Y3501060Z"
-email = "jornavarro@gmail.com"
-phone = "641712531"
+email = "modinaspain@gmail.com"
+phone = "640702535"
+
+# name = "Jorge"
+# surname = "Navarro"
+# nie = "Y3501060Z"
+# email = "jornavarro@gmail.com"
+# phone = "641712531"
 
 def checkWebsite():
-    return alternativeCheck()
+    # return alternativeCheck()
     res = False
     try:
         with sync_playwright() as p:
@@ -43,8 +43,10 @@ def checkWebsite():
                 time.sleep(5) 
                 browser.close()
             else:
-                playAlert()
-                print("✅ Appointment available!")
+                now = datetime.now()
+                now_str = now.strftime("%H:%M")
+                print(f"[{now_str}] ✅ Appointment available, trying to book it!")
+                bookAppointment(page)
                 time.sleep(5000000000)
                 res = True
     except Exception as e:
@@ -68,7 +70,7 @@ def alternativeCheck():
         page.click("text=Siguiente")
         time.sleep(5) 
         if page.is_visible("text=No hay horas disponibles"):
-            print("❌ No hay horas disponibles")
+            print("❌ No hay horas disponibles!")
             time.sleep(10) 
             browser.close()
             return False
@@ -140,7 +142,7 @@ def bookAppointment(page):
             print("✅ Clicked Confirmar (JavaScript)")
             time.sleep(1)
     print("end")
-    # playAlert()
-    time.sleep(20000000)
+    playAlert()
+    time.sleep(200000000000)
     
 
