@@ -140,7 +140,7 @@ def bookAppointment(page):
             print("✅ Clicked Confirmar (JavaScript)")
             time.sleep(1)
     print("end")
-    playAlert()
+    # playAlert()
     time.sleep(20000000)
     
 

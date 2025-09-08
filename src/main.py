@@ -15,7 +15,7 @@ def main():
                 time.sleep(120000000)
             else:
                 print("❌ No appointments available.")
-            time.sleep(60) 
+            time.sleep(50) 
     except KeyboardInterrupt:
         print("\nApp stopped by user. checked {} times.".format(count))
 
