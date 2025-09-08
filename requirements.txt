@@ -1,0 +1,4 @@
+playwright
+plyer
+# dbus-python
+pygame
