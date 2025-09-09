@@ -143,6 +143,6 @@ def bookAppointment(page):
             time.sleep(1)
     print("end")
     playAlert()
-    time.sleep(200000000000)
+    time.sleep(2000000)
     
 

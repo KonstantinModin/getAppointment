@@ -14,8 +14,8 @@ def main():
             if checkWebsite():                
                 time.sleep(120000000)
             else:
-                print("❌ No appointments available.")
-            time.sleep(50) 
+                print("❌ No appointments available!")
+            time.sleep(40) 
     except KeyboardInterrupt:
         print("\nApp stopped by user. checked {} times.".format(count))
 
