@@ -5,11 +5,11 @@ from datetime import datetime
 
 url = 'https://sige.gva.es/qsige/citaprevia.justicia/#/es/home?uuid=01E4-33B69-2883-5B9B8'
 
-name = "Anastasia"
-surname = "Modina"
-nie = "Y3501060Z"
-email = "modinaspain@gmail.com"
-phone = "640702535"
+name = "Konstantin"
+surname = "Modin"
+nie = "Y3501082J"
+email = "konstantin.v.modin@gmail.com"
+phone = "642263271"
 
 # name = "Jorge"
 # surname = "Navarro"
@@ -47,7 +47,7 @@ def checkWebsite():
                 now_str = now.strftime("%H:%M")
                 print(f"[{now_str}] ✅ Appointment available, trying to book it!")
                 bookAppointment(page)
-                time.sleep(5000000000)
+                time.sleep(2*24*60*60)
                 res = True
     except Exception as e:
         print(f"Something went wrong: {e}")
@@ -79,7 +79,7 @@ def alternativeCheck():
             now_str = now.strftime("%H:%M")
             print(f"[{now_str}] ✅ Appointment available, trying to book it!")
             bookAppointment(page)
-            time.sleep(5000000000)
+            time.sleep(2*24*60*60)
     
 def bookAppointment(page):
     time.sleep(1)
@@ -143,6 +143,6 @@ def bookAppointment(page):
             time.sleep(1)
     print("end")
     playAlert()
-    time.sleep(2000000)
+    time.sleep(2*24 * 60 * 60)
     
 

@@ -12,10 +12,10 @@ def main():
             now_str = now.strftime("%H:%M")
             print(f"[{now_str}] Checking website... Attempt #{count}")
             if checkWebsite():                
-                time.sleep(120000000)
+                time.sleep(2*24 * 60 * 60)
             else:
                 print("❌ No appointments available!")
-            time.sleep(40) 
+            time.sleep(10) 
     except KeyboardInterrupt:
         print("\nApp stopped by user. checked {} times.".format(count))
 
